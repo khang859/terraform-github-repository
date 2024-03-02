@@ -180,3 +180,9 @@ variable "vulnerability_alerts" {
   description = "Whether the repository has vulnerability alerts enabled"
   type        = bool
 }
+
+variable "archived" {
+  default     = false
+  description = "Whether the repository is archived"
+  type        = bool
+}

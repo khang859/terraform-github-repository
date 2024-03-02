@@ -26,6 +26,7 @@ resource "github_repository" "self" {
   topics                 = var.topics
   visibility             = var.visibility
   vulnerability_alerts   = var.vulnerability_alerts
+  archived               = var.archived
 
   dynamic "pages" {
     for_each = var.enable_pages ? [1] : []
