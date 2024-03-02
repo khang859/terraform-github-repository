@@ -28,6 +28,12 @@ resource "github_repository" "self" {
   vulnerability_alerts   = var.vulnerability_alerts
   archived               = var.archived
 
+  security_and_analysis {
+    secret_scanning {
+      status = false
+    }
+  }
+
   dynamic "pages" {
     for_each = var.enable_pages ? [1] : []
 
