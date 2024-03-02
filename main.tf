@@ -30,7 +30,7 @@ resource "github_repository" "self" {
 
   security_and_analysis {
     secret_scanning {
-      status = false
+      status = "disabled"
     }
   }
 
